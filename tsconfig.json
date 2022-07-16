@@ -15,7 +15,8 @@
       "@/*": ["./src/*"]
     },
     "types": [
-      "vite/client"
+      "vite/client",
+      "element-plus/global"
     ]
   },
   "include": [

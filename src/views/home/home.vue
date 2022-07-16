@@ -1,7 +1,7 @@
 <template>
-  <n-grid x-gap="12" :cols="2">
+  <el-row>
     <ChildView @change="change"></ChildView>
-  </n-grid>
+  </el-row>
 </template>
 
 <script setup lang="ts">

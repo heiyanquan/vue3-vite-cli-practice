@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
 import { resolve } from 'path'
 import Components from 'unplugin-vue-components/vite'
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite' //按需自动加载依赖包
 
@@ -20,16 +20,12 @@ export default defineConfig({
       cache: false
     }),
     Components({
-      resolvers: [NaiveUiResolver()]
+      resolvers: [ElementPlusResolver()]
     }),
     //自动加载依赖
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'pinia'
-        // 'vue-i18n', '@vueuse/head', '@vueuse/core'
-      ],
+      resolvers: [ElementPlusResolver()],
+      imports: ['vue', 'vue-router', 'pinia'],
       //需要按需自动引入的依赖包
       dts: 'src/auto-import.d.ts'
       //选择auto-import.d.ts生成的位置'
@@ -64,7 +60,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           echarts: ['echarts'],
-          naiveChunk: ['@vicons/ionicons5', 'naive-ui']
+          naiveChunk: ['@vicons/ionicons5', 'element-plus']
         }
       }
     }

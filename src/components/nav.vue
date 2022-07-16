@@ -11,24 +11,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const navList = ref([
-  { label: 'home', path: '/home' },
-  { label: 'attr', path: '/attr' },
-  { label: 'emit', path: '/emit' },
-  { label: 'expose', path: '/expose' },
-  { label: 'props', path: '/props' },
-  { label: 'setup', path: '/setup' },
-  { label: 'vModel', path: '/vModel' },
-  { label: 'watch', path: '/watch' },
-  { label: 'router', path: '/router' },
-  { label: 'module_id', path: '/module_id' },
-  { label: 'vnode-optimize', path: '/vnodeOptimize' },
-  { label: 'vnode-normal', path: '/vnodeNormal' },
-  { label: 'vnode-old', path: '/vnodeOld' },
-  { label: 'iframe-company-Detail', path: '/companyDetail' },
-  { label: 'gaode', path: '/gaode' },
-  { label: 'drag', path: '/drag' },
-])
+const navList = ref([{ label: 'home', path: '/home' }])
 const colorList = ref([
   '#46A0FF',
   '#FFC64C',

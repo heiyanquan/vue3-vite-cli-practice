@@ -4,25 +4,9 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    LoadingContent: typeof import('./src/components/LoadingContent.vue')['default']
-    MessageContent: typeof import('./src/components/MessageContent.vue')['default']
+    ElGrid: typeof import('element-plus/es')['ElGrid']
+    ElRow: typeof import('element-plus/es')['ElRow']
     Nav: typeof import('./src/components/nav.vue')['default']
-    NButton: typeof import('naive-ui')['NButton']
-    NCard: typeof import('naive-ui')['NCard']
-    NCheckbox: typeof import('naive-ui')['NCheckbox']
-    NDataTable: typeof import('naive-ui')['NDataTable']
-    NDialogProvider: typeof import('naive-ui')['NDialogProvider']
-    NGi: typeof import('naive-ui')['NGi']
-    NGrid: typeof import('naive-ui')['NGrid']
-    NInput: typeof import('naive-ui')['NInput']
-    NModal: typeof import('naive-ui')['NModal']
-    NPagination: typeof import('naive-ui')['NPagination']
-    NSelect: typeof import('naive-ui')['NSelect']
-    NSpace: typeof import('naive-ui')['NSpace']
-    NSpin: typeof import('naive-ui')['NSpin']
-    Page: typeof import('./src/components/global/page.vue')['default']
-    Spin: typeof import('./src/components/global/spin.vue')['default']
-    Table: typeof import('./src/components/global/table.vue')['default']
   }
 }
 
